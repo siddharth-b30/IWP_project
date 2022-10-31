@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  background-color: #ffecef;
+}
+html {
+  scroll-behavior: smooth;
+}
+.main_container {
+  display: flex;
+  position: relative;
+  animation: wholeAnimation 0.75s ease-in-out 0 1 none;
+}
+@keyframes wholeAnimation {
+  0% {
+    opacity: 0;
+    transform: rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+.main_container .details {
+  background-color: #251b37;
+  color: #ffcaca;
+  text-align: center;
+  font-size: 18px;
+}
+.main_container .side_menu {
+  width: 350px;
+  height: 100%;
+  background-color: #251b37;
+  padding: 30px 0;
+  position: fixed;
+}
+
+.main_container .side_menu h1 {
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main_container .side_menu span {
+  margin: 40px 0 30px 0;
+  letter-spacing: 2px;
+  background-color: #251b37;
+}
+.main_container .side_menu ul li a {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px 0 15px 0;
+  padding-top: 15px;
+  letter-spacing: 2px;
+  background-color: #251b37;
+  color: #ffecef;
+}
+.main_container .side_menu ul li {
+  position: relative;
+}
+.main_container .side_menu ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  background-color: #ffcaca;
+}
+.main_container .side_menu ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.main_container .side_menu ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: block;
+  line-height: 1.8;
+  font-size: 15px;
+  background-color: #251b37;
+}
+.main_container .side_menu uil {
+  margin-top: 10px;
+  font-size: 6em;
+  width: 25px;
+  background-color: #251b37;
+}
+.main_container .side_menu ul li a i {
+  color: #ffecef;
+  background-color: #251b37;
+}
+.main_container .side_menu .contact_info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+  background-color: #ffecef;
+  width: 100%;
+  justify-content: space-around;
+  border-right: 2px solid #251b37;
+}
+.main_container .side_menu .contact_info a {
+  display: block;
+  width: 50px;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 8px;
+  color: #000;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #ffecef;
+  font-size: 1.5em;
+}
+
+.main_container .content {
+  width: 100%;
+  margin-left: 380px;
+}
+
+.main_container .content .header {
+  padding: 20px;
+  background-color: #b2b2b2;
+  color: #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.main_container .content .info {
+  margin: 20px;
+  color: #eeeeee;
+  line-height: 25px;
+}
+.main_container .content .info div {
+  margin-bottom: 20px;
+}
+
+.main_container .content #one h2 {
+  font-size: 18px;
+  margin-bottom: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.8;
+  position: relative;
+}
+.main_container .content #one p {
+  margin-bottom: 1.5em;
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+.main_container .content #one #intro {
+  letter-spacing: 3px;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.main_container .content #one span {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #5c5c5c;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.main_container .content .cards i {
+  font-size: 2em;
+}
+.main_container .content .cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.main_container .content .cards h3 {
+  margin-top: 20px;
+}
+.main_container .content .card_1 {
+  border-top: 4px solid #3f3b6c;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  border-bottom: 4px solid #3f3b6c;
+}
+.main_container .content .card_2 {
+  border-top: 4px solid #624f82;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  border-bottom: 4px solid #624f82;
+}
+.main_container .content .card_3 {
+  border-top: 4px solid #9f73ab;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  border-bottom: 4px solid #9f73ab;
+}
+.main_container .content .card_4 {
+  border-top: 4px solid #d58bdd;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  border-bottom: 4px solid #d58bdd;
+}
+.main_container .content #two span {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #999999;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.main_container .content #two h2 {
+  font-size: 18px;
+  margin-bottom: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.8;
+  position: relative;
+}
+.main_container .content #two .panels {
+  width: 800px;
+  margin-left: 0px;
+}
+.main_container .content #two .panels .panel {
+  margin-bottom: 15px;
+}
+.main_container .content #two .panels .panel .panel_title {
+  position: relative;
+  padding: 24px 80px 24px 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #372948;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.main_container .content #two .panels .panel .panel_title i {
+  background-color: #372948;
+  color: #ffecef;
+}
+.main_container .content #two .panels .panel .panel_title h5 {
+  background-color: #372948;
+  color: #ffecef;
+  letter-spacing: 1px;
+}
+.main_container .content #two .panels .panel .panel_title .expand {
+  position: absolute;
+  right: 30px;
+  top: 35%;
+  transition: all ease-in 0.6s 0.5s;
+}
+.main_container .content #two .panels .panel .panel_content {
+  padding: 15px;
+  background-color: #937dc2;
+  border-radius: 12px 12px 16px 16px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-weight: 300;
+  width: 100%;
+}
+.main_container .content #two .panels .panel .panel_content ul li {
+  background-color: #937dc2;
+  color: #ffecef;
+}
+.main_container .content #two .panels .panel .panel_content .first {
+  float: left;
+  width: 50%;
+  background-color: #937dc2;
+}
+.main_container .content #two .panels .panel .panel_content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.main_container .content #three span {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #999999;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.main_container .content #three h2 {
+  font-size: 18px;
+  margin-bottom: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.8;
+  position: relative;
+}
+.main_container .content #three #skill_content {
+  margin-bottom: 1.5em;
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+.main_container .content #three .course_list {
+  position: relative;
+}
+.main_container .content #three .course_list .courses {
+  position: relative;
+  line-height: 40px;
+}
+.main_container .content #three .course_list .courses .course_name {
+  display: block;
+  left: 400;
+  list-style: none;
+  margin-top: 3px;
+  border-left: 3px solid #372948;
+  transition: 0.3s;
+  font-weight: 700;
+}
+.main_container .content #three .course_list .courses .course_name::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #4fa095;
+  transform: scaleX(0);
+  transition: 0.3s;
+  transform-origin: left;
+}
+.main_container
+  .content
+  #three
+  .course_list
+  .courses
+  .course_name:hover::before {
+  transform: scaleX(1);
+}
+.main_container .content #three .course_list .courses .course_name:hover {
+  margin-left: 20px;
+}
+.main_container
+  .content
+  #three
+  .course_list
+  .courses
+  .course_name
+  #course_title {
+  position: relative;
+  padding: 2px;
+  display: inline-block;
+  font-weight: 800;
+  z-index: 1;
+  transition: 0.5s;
+  letter-spacing: 3px;
+}
+
+.main_container .content #three .languages {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+}
+.main_container .content #three .languages .box {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 25px 0;
+}
+.main_container .content #three .languages .box .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+.main_container .content #three .languages .box .bar {
+  height: 8px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.16);
+  margin-top: 6px;
+  border-radius: 6px;
+}
+.main_container .content #three .languages .box .bar .front-end {
+  position: relative;
+  width: 85%;
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+  background: #937dc2;
+  animation: progress 0.6s ease-in-out forwards;
+  opacity: 0;
+}
+.main_container .content #three .languages .box .bar .python {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+  background: #c689c6;
+  animation: progress 0.6s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+.main_container .content #three .languages .box .bar .R {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+  background: #624f82;
+  animation: progress 0.6s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+.main_container .content #three .languages .box .bar .SQL {
+  position: relative;
+  width: 65%;
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+  background: #ffabe1;
+  animation: progress 0.6s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main_container .content #three .languages .box .bar .percent .number {
+  position: absolute;
+  background: #937dc2;
+  padding: 2px 6px;
+  border-radius: 3px;
+  right: -14px;
+  top: -40px;
+  letter-spacing: 0;
+  font-size: 12px;
+  color: #fff;
+}
+.main_container .content #three .languages .box .bar .python .number {
+  position: absolute;
+  background: #c689c6;
+  padding: 2px 6px;
+  border-radius: 3px;
+  right: -14px;
+  top: -40px;
+  letter-spacing: 0;
+  font-size: 12px;
+  color: #fff;
+}
+.main_container .content #three .languages .box .bar .R .number {
+  position: absolute;
+  background: #624f82;
+  padding: 2px 6px;
+  border-radius: 3px;
+  right: -14px;
+  top: -28px;
+  letter-spacing: 0;
+  font-size: 12px;
+  color: #fff;
+}
+.main_container .content #three .languages .box .bar .SQL .number {
+  position: absolute;
+  background: #ffabe1;
+  padding: 2px 6px;
+  border-radius: 3px;
+  right: -14px;
+  top: -40px;
+  letter-spacing: 0;
+  font-size: 12px;
+  color: #fff;
+}
+
+.main_container .content #four span {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #999999;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.main_container .content #four h2 {
+  font-size: 18px;
+  margin-bottom: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.8;
+  position: relative;
+}
+.main_container .content #four .project_cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 0px 30px 0px 0px;
+}
+.main_container .content #four .project_cards .project_card1 {
+  width: 250px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #ebc7e8;
+}
+.main_container .content #four .project_cards .project_card2 {
+  width: 250px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #bface0;
+}
+.main_container .content #four .project_cards .project_card3 {
+  width: 250px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #a084ca;
+}
+.main_container .content #four .project_cards .project_card4 {
+  width: 250px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #645caa;
+}
+.main_container .content #four .project_cards .project .project_title {
+  padding-top: 10px;
+  height: 20px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+  text-decoration: underline;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.main_container
+  .content
+  #four
+  .project_cards
+  .project_card1
+  .project
+  .project_content {
+  text-align: center;
+  color: #000;
+  letter-spacing: 1px;
+  background-color: #ebc7e8;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
+.main_container
+  .content
+  #four
+  .project_cards
+  .project_card2
+  .project
+  .project_content {
+  text-align: center;
+  color: #000;
+  letter-spacing: 1px;
+  background-color: #bface0;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
+.main_container
+  .content
+  #four
+  .project_cards
+  .project_card3
+  .project
+  .project_content {
+  text-align: center;
+  color: #000;
+  letter-spacing: 1px;
+  background-color: #a084ca;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
+.main_container
+  .content
+  #four
+  .project_cards
+  .project_card4
+  .project
+  .project_content {
+  text-align: center;
+  color: #000;
+  letter-spacing: 1px;
+  background-color: #645caa;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
